@@ -1,0 +1,93 @@
+/* 
+border-box
+As propriedades de largura (width) e de altura (height) incluem o tamanho padding size e a propriedade border, mas não incluem a propriedade margin. */
+/* CSS box-sizing property makes sure that padding and borders do not increase the width and height of elements.
+Set box-sizing to CSS border-box to guarantee that the element size includes borders and padding.
+You can let users control the size of certain elements by using the resize property. */
+/* esse asterísco é o wild card selector, ele seleciona tudo da página, ele disse que é bom usar apenas com esse box-sizing e nada mais */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* esse display none que está aplicado a todas as imagens atravéz da classe faz elas serem escondidas por default */
+  .gallery-img {
+    display: none;
+    /* se imagem for menor ficará menor, se for maior não deixará passar disso, foi o que eu entendi */
+  }
+  
+  /* classe da imagem ativa (a primeira no html, mudaremos para as outras no js) */
+  /* imagem que tem duas classes, como todas que serão mostradas, prevalece a segunda classe escrita na página, por isso .active precisa estar depois de .gallery-img */
+  .active {
+    display: block;
+  }
+  
+  .image-gallery {
+    width: 100%;
+    /* três próximas propriedades juntas são ótimo jeito de centrar coisas dentro de alguma coisa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn {
+    background-color: #0074d9;
+    color: white;
+    /* é o brian que tá fazendo esse css, não a jane, por isso tudo em px e não rem */
+    font-size: 20px;
+    padding: 5px 20px;
+    /* olha só, transparente kkk */
+    border-color: transparent;
+    border-radius: 5px;
+    /* muda o cursos quando podemos clickar na coisa */
+    cursor: pointer;
+  }
+  
+  .prev {
+    margin-right: 15px;
+  }
+  
+  /*usando o :disabled configuramos as propriedades para quando o botão estiver desabilitado*/
+  .btn:disabled {
+    background-color: #666;
+    /*muda para um cursor com sinal de não permitido, deixando mais claro que não podemos fazer a ação (no caso, voltar o botão para mudar de foto*/
+    /*mas sempre bom lembrar que no ceular não tem cursor, não existe :hover, ou vc clica ou não clica, então precisamos sempre considerar os dispositivos móveis tb (nesse caso a diferença de cor é suficiente para indicar que não dá pra clicar)*/
+    cursor: not-allowed;
+  }
+
+  /*biblioteca Swiper*/
+  .swiper-slide {
+    text-align: center;
+  }
+
+
+  /*esses próximos colocamos quando adicionamos o emoji e a biblioteca de físicas*/
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+
+  .main-nav {
+    background-color: black;
+    margin: 0;
+    padding: 15px;
+    
+    /*precisa do position relative pra isso do z-index funcionar*/
+    position: relative;
+    z-index: 5;
+  }
+
+  .brand {
+    margin: 0;
+    font-size: 80px;
+    cursor: grab;
+    position: relative;
+    z-index: 10;
+  }

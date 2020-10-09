@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans+Condensed:wght@300&family=PT+Sans&display=swap');
+
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 15px;
+}
+
+.js body:not(.mobile) {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	margin: 0;
+	--color-menu: #F8F9FA;
+	--color-menu-hover: #ffffff;
+	color: F8F9FA;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Montserrat', sans-serif;
+	background: #2f1649;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #300646, #09050c);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #300646, #09050c);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* 
+a {
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
+a:hover, a:focus {
+
+	outline: none;
+}
+ */
+
+.menu {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none;
+	/* Hide scrollbar in FF */
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: center;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mobile .menu {
+	padding: 5rem 0;
+	height: auto;
+}
+
+.menu__item {
+	flex: none;
+	/* margin-right: 4rem; */
+	padding: 1rem;
+}
+
+.menu__item-inner {
+	white-space: nowrap;
+	position: relative;
+	cursor: pointer;
+	/* font-size: 7vw;
+	padding: 0.5rem; */
+	display: block;
+	color: var(--color-menu);
+	transition: transform 0.2s;
+}
+
+.menu__item-inner:hover {
+	/* font-style: italic; */
+	transform: translate3d(2rem, 0, 0);
+    color: var(--color-menu-hover);
+    font-weight: bold;
+}
+
+/* .menu__item-inner::before {
+	content: '';
+	top: 55%;
+	width: 3.5rem;
+	height: 1px;
+	background: currentColor;
+	position: absolute;
+	right: calc(100% + 2rem);
+	opacity: 0;
+	pointer-events: none;
+}
+
+.menu__item-inner:hover::before {
+	opacity: 1;
+} */
+
+/* Pseudo-element for making sure that hover area is active */
+
+.menu__item-inner:hover::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -5.5rem;
+	right: 0;
+	height: 100%;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+@media screen and (min-width: 53em) {
+	
+	.menu__item {
+		margin-right: 25vw;
+	}
+	.menu__item-inner {
+		padding: 1vh 0;
+		font-size: 9.5vh;
+	}
+}

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+
+
+
+
+
+
+
+body, html {
+  font-family: 'Open Sans Condensed', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #F8F9FA;
+  background-image: url("../imagens/hadias/HaDias-capa-glitch1.jpg");
+
+
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.parallax {
+  background-attachment: fixed;
+  min-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+#foto1 {
+  background-image: url("../imagens/hadias.jpg");
+}
+
+
+#foto2 {
+  background-image: url("../imagens/hadias/HaDias-capa-glitch.jpg");
+}
+
+
+#foto3 {
+  background-image: url("../imagens/hadias/HaDias-capa-glitch3.jpg");
+}
+
+article {
+  font-size: 1.5rem;
+  width: 60%;
+  text-align: justify;
+  border: 0px solid red;
+  margin: 6rem auto;
+}
+
+dl {
+  font-size: 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+}
+
+/*------GALERIA DE IMAGENS------*/
+
+
+.swiper-button-prev {
+  /* display: block; */
+  color: rgb(0, 29, 255);
+}
+
+.swiper-button-next {
+  color: rgb(0, 29, 255);
+}
+
+.swiper-button-prev:hover {
+color : #F8F9FA;
+
+}
+
+.swiper-button-next:hover {
+  color : #F8F9FA;
+}
+
+.swiper-container {
+  margin: 0;
+  padding: 0;
+}
+
+/*------FIM DA GALERIA-----*/
+
+/*galeria distribuida*/
+ 
+ .row {
+  justify-content: center;
+  width: 100%;
+  margin: 10rem 0;
+}
+
+.col-4 {
+  margin: 0;
+  padding: 0;
+} 
+
+/*---------*/
+
+
+#outro-estilo {
+margin-top: 10rem;
+border-top: 3px solid #1732A6;
+padding-top: 5rem;
+}
+
+#ft {
+  width: 100%;
+  font-size: 1.1rem;
+  border-top: 2px solid #1732A6;
+  padding-top: 3rem;
+}
+
+dl, dt, dd {
+  text-align: center;
+}
+
+dt {
+  margin-top: 0.8rem;
+}
+
+.conteiner-estilo2 {
+  width: 50%;
+  text-align: justify;
+  border: 0px solid red;
+  margin: 6rem auto;
+}
+
+.linha {
+  border-top: 2px solid #1732A6;
+}
+
+/*boootstrap bagulhos*/
+
+
+article {
+  width: 100%;
+}
+p {
+  line-height: 1.75;
+  font-size: 1.2rem;
+  /* width: 60%; */
+  text-align: justify;
+  border: 0px solid red;
+  margin: 2rem;
+  padding: 0 0 2rem 0;
+}
+
+
+.text-faded {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.page-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.bg-faded {
+  background-color: rgba(19, 20, 54, 0.5);
+}
+
+@media (min-width: 992px) {
+  .product-item .product-item-title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -3rem;
+    margin-top: -3rem;
+  }
+  .product-item .product-item-img {
+    position: relative;
+    z-index: 0;
+    max-width: 60vw;
+  }
+  .product-item .product-item-description {
+    position: relative;
+    z-index: -2;
+    margin-top: -3rem;
+    margin-bottom: -5rem;
+    max-width: 50vw;
+  }
+}
